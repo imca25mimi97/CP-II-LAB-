@@ -9,13 +9,12 @@ int main(){
 	gets(s1);
 	printf("enter string2");
 	gets(s2);
-	char res[10];
-	res[10]=strstr(s1,s2);
-    if(res){
-	puts(res);
+	if(strstr(s1,s2) != NULL){
+		printf("substring found");
 	}
 	else {
 		printf("substring not found");
 	}
     return 0;
 }
+
