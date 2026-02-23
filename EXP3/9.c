@@ -13,8 +13,6 @@ typedef struct Car {
 
 int main() {
     car car1;
-
-    // Input Car details
     printf("enter car make:");
     gets(car1.make);
     printf("enter car model:");
