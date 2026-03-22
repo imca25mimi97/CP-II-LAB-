@@ -4,8 +4,8 @@
 int main() {
     int a[5] = {10, 20, 30, 40, 50};
 
-    int *start = a;          // pointer to first element
-    int *end = a + 4;    // pointer to last element
+    int *start = a;
+    int *end = a + 4;
 
     while (start < end) {
         int temp = *start;
