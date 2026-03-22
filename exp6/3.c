@@ -3,7 +3,7 @@
 
 int main() {
     int a[5] = {10, 20, 30, 40, 50};
-
+    int i;
     int *start = a;
     int *end = a + 4;
 
@@ -17,7 +17,7 @@ int main() {
     }
 
     printf("Reversed array: ");
-    for (int i = 0; i < 5; i++) {
+    for (i = 0; i < 5; i++) {
         printf("%d ", a[i]);
     }
 
