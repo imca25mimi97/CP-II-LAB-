@@ -1,25 +1,28 @@
-//Write a program to reverse the elements of an array in-place using pointers.
+//Implement a function to compare two strings using pointers. 
 #include <stdio.h>
-
-int main() {
-    int a[5] = {10, 20, 30, 40, 50};
-    int i;
-    int *start = a;
-    int *end = a + 4;
-
-    while (start < end) {
-        int temp = *start;
-        *start = *end;
-        *end = temp;
-
-        start++;
-        end--;
-    }
-
-    printf("Reversed array: ");
-    for (i = 0; i < 5; i++) {
-        printf("%d ", a[i]);
-    }
-
-    return 0;
+int cmp(char *a,char *b){
+	int i;
+	for(i=0;*(a+i)!=NULL||*(b+i)!=NULL;i++){
+		
+		if(*(a+i)-*(b+i)==0){
+			continue;
+		}
+		else{
+			return *(a+i)-*(b+i);
+		}
+	}
 }
+int main(){
+	char c[4]="abc";
+	char d[4]="abc";
+	if(cmp(&c,&d)){
+		printf("strings are not equal");
+	}
+	else{
+		printf("strings are equal");
+	}
+
+	return 0;
+}
+// OUTPUT-strings are equal	
+	

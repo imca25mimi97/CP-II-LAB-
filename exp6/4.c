@@ -1,18 +1,23 @@
-// Implement a function to calculate the sum of all elements in an array using pointers. 
+//Implement a function to count the number of vowels in a string using pointers. 
+
+#include <string.h>
 #include <stdio.h>
 
-int sum(int *p) {
-    int sum = 0;
-    for (int i = 0; i < 5; i++) {
-        sum += *(p + i);
-    }
-    return sum;
+int vwl_count(char *p){
+	int i,count=0;
+	for(i=0;*(p+i)!=NULL;i++){
+		if(*(p+i)=='a' || *(p+i)=='e' || *(p+i)=='i' || *(p+i)=='o' || *(p+i)=='u'){
+			count++;
+		}
+		else if(*(p+i)=='A' || *(p+i)=='E' || *(p+i)=='I' || *(p+i)=='O' || *(p+i)=='U'){
+			count++;
+		}
+	}
+	return count;
 }
-
-int main() {
-    int arr[5] = {1, 2, 3, 4, 5};
-    int result = sum(arr);
-
-    printf("Sum = %d\n", result);
-    return 0;
+int main(){
+	char s[10]="xjhatyaed";
+	printf("the total vowels are %d\n",vwl_count(&s));
+	return 0;
 }
+//output-the total vowels are 3

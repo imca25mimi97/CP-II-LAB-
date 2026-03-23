@@ -1,23 +1,17 @@
-//Implement a function to find the largest element in an array using pointers. 
+//Write a program to copy one string to another using pointer. 
 #include <stdio.h>
-
-int large(int *p){
-    int large=0;
-    for(int i=0;i<5;i++){
-        if(*(p+i)>large){
-            large=*(p+i);
-        }
-    }
-    return large;
-}
+#include <string.h>
 
 int main(){
-    int a[5];
-    printf("enter the elements\n");
-    for(int i=0;i<5;i++){
-        scanf("%d",&a[i]);
-    }
-    printf("the largest element is-");
-    printf("%d\n",large(a));
-    return 0;
+	char a[4]="abc";
+	char b[4];
+	char *p=a;
+	int i;
+	
+	strcpy(b,p);
+	
+	for(i=0;b[i]!=NULL;i++){
+		printf("%c\n",b[i]);
+	}
+	return 0;
 }
