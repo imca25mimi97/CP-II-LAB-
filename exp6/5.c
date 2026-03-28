@@ -20,7 +20,7 @@ int main() {
 
     sort(a);
 
-    printf("Sorted array: ");
+    printf("The Sorted array: ");
     for (int i = 0; i < 5; i++) {
         printf("%d ", *(a+ i));
     }
